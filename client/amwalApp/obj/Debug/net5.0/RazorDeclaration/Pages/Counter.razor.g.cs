@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace amwalApp.Pages
+namespace AccWeb.Pages
 {
     #line hidden
     using System;
@@ -70,14 +70,14 @@ using Microsoft.JSInterop;
 #nullable disable
 #nullable restore
 #line 9 "D:\accweb\client\amwalApp\_Imports.razor"
-using amwalApp;
+using AccWeb;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "D:\accweb\client\amwalApp\_Imports.razor"
-using amwalApp.Shared;
+using AccWeb.Shared;
 
 #line default
 #line hidden

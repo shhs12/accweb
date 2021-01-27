@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\accweb\\client\\amwalApp\\amwalApp.csproj": {}
+    "D:\\accweb\\client\\amwalApp\\AccWeb.csproj": {}
   },
   "projects": {
-    "D:\\accweb\\client\\amwalApp\\amwalApp.csproj": {
+    "D:\\accweb\\client\\amwalApp\\AccWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\accweb\\client\\amwalApp\\amwalApp.csproj",
-        "projectName": "amwalApp",
-        "projectPath": "D:\\accweb\\client\\amwalApp\\amwalApp.csproj",
+        "projectUniqueName": "D:\\accweb\\client\\amwalApp\\AccWeb.csproj",
+        "projectName": "AccWeb",
+        "projectPath": "D:\\accweb\\client\\amwalApp\\AccWeb.csproj",
         "packagesPath": "C:\\Users\\sa\\.nuget\\packages\\",
         "outputPath": "D:\\accweb\\client\\amwalApp\\obj\\",
         "projectStyle": "PackageReference",

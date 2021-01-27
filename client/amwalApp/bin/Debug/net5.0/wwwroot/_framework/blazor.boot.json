@@ -2,7 +2,7 @@
   "cacheBootResources": true,
   "config": [ ],
   "debugBuild": true,
-  "entryAssembly": "amwalApp",
+  "entryAssembly": "AccWeb",
   "icuDataMode": 0,
   "linkerEnabled": false,
   "resources": {
@@ -198,11 +198,11 @@
       "mscorlib.dll": "sha256-pfURHvguun0aGHBikgqj1tcIC9yVwDja+omBjH9K0WU=",
       "netstandard.dll": "sha256-zDt6ZaAbtKh1rxzQ7CMtlli234CuRfzZU6Fe9cc2FG4=",
       "System.Private.CoreLib.dll": "sha256-KRDEW\/5qbC0\/9M5IbDGIAM1sKCutWHyq9oLl8WW0c3I=",
-      "amwalApp.dll": "sha256-+9gExxjLidNBiKZt3xpGWr1bm98sPpOPB489p6ZYpK0="
+      "AccWeb.dll": "sha256-ZzUVqJutMF8wVjobbn9MREgTRtThHbxPrN+joLq0tDA="
     },
     "lazyAssembly": null,
     "pdb": {
-      "amwalApp.pdb": "sha256-ylT07O7Czg23+ZJH42vpvqpmf3wtHlY+y91KDinohcE="
+      "AccWeb.pdb": "sha256-O8u6Q1RObyu+XPWAAExqb6wx9C3qqhRU4QynLY5LsiM="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-\/mwFhTTF4Kca8PG7G6rxaGqCueWH9XbWEIK1Fm8GbFg=",

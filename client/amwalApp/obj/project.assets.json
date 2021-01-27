@@ -1432,19 +1432,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shalswadi\\.nuget\\packages\\": {}
+    "C:\\Users\\sa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\accweb\\client\\amwalApp\\amwalApp.csproj",
-      "projectName": "amwalApp",
-      "projectPath": "D:\\accweb\\client\\amwalApp\\amwalApp.csproj",
-      "packagesPath": "C:\\Users\\shalswadi\\.nuget\\packages\\",
+      "projectUniqueName": "D:\\accweb\\client\\amwalApp\\AccWeb.csproj",
+      "projectName": "AccWeb",
+      "projectPath": "D:\\accweb\\client\\amwalApp\\AccWeb.csproj",
+      "packagesPath": "C:\\Users\\sa\\.nuget\\packages\\",
       "outputPath": "D:\\accweb\\client\\amwalApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\shalswadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1453,7 +1457,9 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\FastReports\\FastReport.Net\\Nugets": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\FastReportOpenSorce\\fr_nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
