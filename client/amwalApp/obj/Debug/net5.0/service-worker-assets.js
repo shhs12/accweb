@@ -109,7 +109,7 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     },
     {
-      "hash": "sha256-uM6pDj2aICfLWBDTRiASFKNXifDfgB2cujOokSxW128=",
+      "hash": "sha256-EFrJyCjXTH6cKR12Eh6rjvJDUwqBAoEoXYelkj\/y85o=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -905,11 +905,11 @@
       "url": "_framework\/dotnet.5.0.2.js"
     },
     {
-      "hash": "sha256-ZzUVqJutMF8wVjobbn9MREgTRtThHbxPrN+joLq0tDA=",
+      "hash": "sha256-NYPWbSNcfj4rld6Cd+zOJyiLGCwMDYfJfwZ5rvChH+s=",
       "url": "_framework\/AccWeb.dll"
     },
     {
-      "hash": "sha256-O8u6Q1RObyu+XPWAAExqb6wx9C3qqhRU4QynLY5LsiM=",
+      "hash": "sha256-RGW\/VUdd3NTSLmvBgYK4mBrduaZvhVz17yjEva3ZnWw=",
       "url": "_framework\/AccWeb.pdb"
     },
     {
@@ -1785,13 +1785,13 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-1jw3SUVUUa+R7XWfaVdt2Vn1mGz2f3NMC08+bs6NbKo=",
+      "hash": "sha256-1TZ6yU5gaGgrlZF8vBhKjBZR73qMjKGiu\/lF68V3y1A=",
       "url": "AccWeb.styles.css"
     },
     {
-      "hash": "sha256-+y5vtQqgLfT3UVQFK1AMduTDyIFBDM\/FoPq\/lo3jOBs=",
+      "hash": "sha256-+umcvGedSO2VEhzF2HNHNp5VFQwV8NPlelDEcsmNyng=",
       "url": "AccWeb.bundle.scp.css"
     }
   ],
-  "version": "uRhXHrDI"
+  "version": "CoDj5ULz"
 };

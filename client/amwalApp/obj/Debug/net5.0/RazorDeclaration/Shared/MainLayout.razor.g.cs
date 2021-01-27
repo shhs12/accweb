@@ -110,6 +110,13 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 15 "D:\accweb\client\amwalApp\_Imports.razor"
+using AccWeb.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998

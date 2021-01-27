@@ -111,6 +111,13 @@ using Radzen.Blazor;
 #line hidden
 #nullable disable
 #nullable restore
+#line 15 "D:\accweb\client\amwalApp\_Imports.razor"
+using AccWeb.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\accweb\client\amwalApp\Pages\FetchData.razor"
 using System.IO;
 

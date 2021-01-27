@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace AccWeb
+namespace AccWeb.Pages.Facility
 {
     #line hidden
     using System;
@@ -117,13 +117,56 @@ using AccWeb.Shared.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class _Imports : System.Object
+#nullable restore
+#line 2 "D:\accweb\client\amwalApp\Pages\Facility\Info.razor"
+using System.ComponentModel.DataAnnotations;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/info")]
+    public partial class Info : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
-        protected void Execute()
+        protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 116 "D:\accweb\client\amwalApp\Pages\Facility\Info.razor"
+       
+    Infotb model = new Infotb();
+    bool success;
+
+    
+    private void OnValidSubmit(EditContext context)
+    {
+        
+        success = true;
+        StateHasChanged();
+    }
+
+
+
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Blue.Darken3,
+            Secondary = Colors.Green.Accent4,
+            AppbarBackground = Colors.Red.Default,
+        },
+
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidth = "260px"
+        }
+    };
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
