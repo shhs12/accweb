@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7XOHn1acHe65Q86qefYW5UEuaGKQ2GfDcUIjv9ECInOR1AjXvbRfKLdMtpFlVXveJFNSW9f5JLQyVZo9l5mjcA==",
+  "dgSpecHash": "GJ9xLyk57lrmkwOWd3E8aT9L5o/9pFsHodPf1pioqpJtwm7EHvFRPf/kyWhKiW0CuZiRmcn0F0GQdxolmeS7Tg==",
   "success": true,
-  "projectFilePath": "D:\\amwal\\amwal-master\\client\\amwalApp\\amwalApp.csproj",
+  "projectFilePath": "D:\\accweb\\client\\amwalApp\\amwalApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shalswadi\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.2\\microsoft.aspnetcore.authorization.5.0.2.nupkg.sha512",
     "C:\\Users\\shalswadi\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.2\\microsoft.aspnetcore.components.5.0.2.nupkg.sha512",

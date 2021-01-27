@@ -23,7 +23,7 @@
             </MudCardHeader>
   
             <MudCardContent>
-                <MudTextField Variant="Variant.Outlined" Label="الاسم الاول" HelperText="اقصى حد 8 حروف"
+                <MudTextField Variant="Variant.Outlined" Label="الاسم الاول" HelperText="اقصى حد 100 حروف"
                               @bind-Value="model.Username" For="@(() => model.Username)" />
                 <MudTextField Variant="Variant.Outlined" Label="البريد الالكتروني"
                               @bind-Value="model.Email" For="@(() => model.Email)" />
@@ -62,7 +62,7 @@
     public class RegisterAccountForm
     {
         [Required]
-        [StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+        [StringLength(100, ErrorMessage = "Name length can't be more than 8.")]
         public string Username { get; set; }
 
         [Required]

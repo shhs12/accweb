@@ -109,7 +109,7 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     },
     {
-      "hash": "sha256-9UB0E5KOVffuyc9Pf0qC+oNdWw04NctxTZt+Fd6V73s=",
+      "hash": "sha256-JSGh63AI49sTrWfqlZNdbeGG\/X74yDH\/ehnSBzoFCXU=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -905,11 +905,11 @@
       "url": "_framework\/dotnet.5.0.2.js"
     },
     {
-      "hash": "sha256-8yDHgR3qrTuwuhbawl+f+P3ykALgWtzortX518U5gjc=",
+      "hash": "sha256-+9gExxjLidNBiKZt3xpGWr1bm98sPpOPB489p6ZYpK0=",
       "url": "_framework\/amwalApp.dll"
     },
     {
-      "hash": "sha256-oKeRDZ8rmqtMrHNqFPhoDYccaEVexoEhohvWrrbhZ6M=",
+      "hash": "sha256-ylT07O7Czg23+ZJH42vpvqpmf3wtHlY+y91KDinohcE=",
       "url": "_framework\/amwalApp.pdb"
     },
     {
@@ -1761,7 +1761,7 @@
       "url": "css\/open-iconic\/README.md"
     },
     {
-      "hash": "sha256-EXFBgTD9eNXNdgXXHeeqN9CI9\/Kl\/kWYSlGTSDbd0so=",
+      "hash": "sha256-WZc4w3790A04TdTNnKsBSZ5FOiLFRkMwBTWRMqeW2nA=",
       "url": "debug.log"
     },
     {
@@ -1793,5 +1793,5 @@
       "url": "amwalApp.bundle.scp.css"
     }
   ],
-  "version": "0M7tmMGE"
+  "version": "EF0c5xuy"
 };
