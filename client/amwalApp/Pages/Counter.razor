@@ -1,0 +1,215 @@
+﻿@page "/counter"
+@using System.ComponentModel.DataAnnotations
+<MudThemeProvider Theme="MyCustomTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<div style="max-width: 100%;" dir="rtl" lang="ar-sa">
+    <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+        <DataAnnotationsValidator />
+        <MudCard Style="direction:rtl; text-align:justify">
+            <MudCardHeader Class="alert alert-primary mt-4 ">
+                <CardHeaderActions>
+                    <MudIconButton Icon="@Icons.Material.Save" Color="MudBlazor.Color.Success"  />
+                    <MudIconButton Icon="@Icons.Material.Edit" Color="MudBlazor.Color.Success" />
+                    <MudIconButton Icon="@Icons.Material.Delete" Color="MudBlazor.Color.Success" />
+                </CardHeaderActions>
+                <CardHeaderContent>
+                   
+                    <MudText Typo="Typo.h6">انشاء مستخدم</MudText>
+                </CardHeaderContent>
+
+
+            </MudCardHeader>
+  
+            <MudCardContent>
+                <MudTextField Variant="Variant.Outlined" Label="الاسم الاول" HelperText="اقصى حد 8 حروف"
+                              @bind-Value="model.Username" For="@(() => model.Username)" />
+                <MudTextField Variant="Variant.Outlined" Label="البريد الالكتروني"
+                              @bind-Value="model.Email" For="@(() => model.Email)" />
+                <MudTextField  Variant="Variant.Outlined" Label="كلمة السر" HelperText="Choose a strong password"
+                              @bind-Value="model.Password" For="@(() => model.Password)" InputType="InputType.Password" />
+                <MudTextField  Variant="Variant.Outlined" Label="ناكيد كلمة السر" HelperText="Repeat the password"
+                              @bind-Value="model.Password2" For="@(() => model.Password2)" InputType="InputType.Password" />
+            </MudCardContent>
+            
+        </MudCard>
+        <MudText Typo="Typo.body2" Align="Align.Center" Class="my-4">
+            Fill out the form correctly to see the success message.
+        </MudText>
+
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="Show Validation Summary">
+                @if (success)
+                {
+                    <MudText Color="Color.Success">Success</MudText>
+                }
+                else
+                {
+                    <MudText Color="@Color.Error">
+                        <ValidationSummary />
+                    </MudText>
+                }
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </EditForm>
+</div>
+
+@code {
+    RegisterAccountForm model = new RegisterAccountForm();
+    bool success;
+
+    public class RegisterAccountForm
+    {
+        [Required]
+        [StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+        public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(30, ErrorMessage = "Password must be at least 8 characters long.", MinimumLength = 8)]
+        public string Password { get; set; }
+
+        [Required]
+        [Compare(nameof(Password))]
+        public string Password2 { get; set; }
+
+    }
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+
+
+
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Blue.Darken3,
+            Secondary = Colors.Green.Accent4,
+            AppbarBackground = Colors.Red.Default,
+        },
+
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidth = "260px"
+        }
+    };
+
+}
+
+<style>
+    .mud-input-label-inputcontrol {
+        top: 0;
+        /* left: 0; */
+        right: 0;
+        position: absolute;
+        transform: translate(0,24px) scale(1);
+    }
+
+    .mud-shrink + label.mud-input-label.mud-input-label-inputcontrol {
+        color: var(--mud-palette-text-primary);
+        transform: translate(0,1.5px) scale(.75);
+        transform-origin: top right;
+    }
+
+
+    .mud-input-helper-text {
+        color: var(--mud-palette-text-secondary);
+        margin: 0;
+        font-size: .75rem;
+        margin-top: 3px;
+        text-align: right;
+        font-weight: 400;
+        line-height: 1.66;
+        letter-spacing: .03333em;
+    }
+
+    .mud-input-label-inputcontrol {
+        top: 0;
+        /* left: 0; */
+        right: 0;
+        position: absolute;
+        transform: translate(0,24px) scale(1);
+    }
+
+
+    .mud-input {
+        font-family: Arial;
+        position: relative;
+        color: var(--mud-palette-text-primary);
+        cursor: text;
+        display: inline-flex;
+        font-size: 1rem;
+        box-sizing: border-box;
+        align-items: center;
+        font-weight: bold;
+        line-height: 1.1876em;
+        letter-spacing: .00938em;
+        margin: 3px;
+    }
+
+    .mud-input-control > .mud-input-label-inputcontrol {
+        color: var(--mud-palette-text-secondary);
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: .00938em;
+        z-index: 0;
+        pointer-events: none;
+        margin-right: 15px;
+        font-family: 'Cairo';
+        width: fit-content;
+    }
+
+
+    .mud-shrink + label.mud-input-label.mud-input-label-inputcontrol {
+        color: blue;
+        transform: translate(0,1.5px) scale(.75);
+        transform-origin: top right;
+        margin-right: 25px;
+        font-family: 'Cairo', sans-serif;
+        /* color: blue; */
+        width: fit-content;
+    }
+
+    .mud-input-control > .mud-input-label-inputcontrol.mud-input-error {
+        color: blue !important;
+        font-family: 'Cairo', sans-serif;
+        width: fit-content;
+    }
+    .mud-typography-h6 {
+        font-size: 1rem;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: .0075em;
+    }
+    .alert-primary {
+        color: white;
+        background-color: #1565c0;
+        border-color: blue;
+        height: 60px;
+    }
+
+    .mud-shrink + label.mud-input-label.mud-input-label-inputcontrol.mud-input-label-outlined {
+        color: var(--mud-palette-text-primary);
+        transform: translate(14px,-6px) scale(.75);
+        width: fit-content;
+        font-family: 'Cairo', sans-serif;
+        color: blue;
+    }
+
+    .mud-input-control > .mud-input-label-inputcontrol.mud-input-error {
+        color: blue !important;
+        font-family: 'Cairo', sans-serif;
+        width: fit-content;
+    }
+</style>

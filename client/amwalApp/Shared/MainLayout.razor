@@ -1,0 +1,302 @@
+﻿@inherits LayoutComponentBase
+<MudThemeProvider Theme="MyCustomTheme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+
+<MudLayout>
+    <MudAppBar Elevation="1" Color="Color.Primary">
+        <MudIconButton Icon="@Icons.Custom.GitHub" Color="Color.Primary" Link="https://github.com/Garderoben/MudBlazor" Target="_blank" />
+
+
+        <MudAppBarSpacer />
+        <h4  class="hederh4 mr-3 mt-3">أموال للمحاسبة والمخزون</h4>
+        <MudIconButton Icon="@Icons.Material.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@ToggleDrawer" />
+    </MudAppBar>
+    <MudDrawer Class="mud-theme-primary" Style="direction:rtl; text-align:justify" @bind-Open="@open" Clipped="@clipped" Color="Color.Primary" Anchor="Anchor.Right" Elevation="1">
+        <MudDrawerHeader Class="pa-0 ma-0">
+
+            <div class="bg-light text-dark rounded mx-2 mt-3 mb-2" style="width:100%">
+                <MudText Typo="Typo.h5" Align="Align.Center">اموال</MudText>
+            </div>
+
+        </MudDrawerHeader>
+
+
+
+
+        <MudNavMenu Class="demo-navmenu bg-light text-dark mx-2 ">
+
+            @*قائمة المنشأة*@
+
+            <MudNavGroup Title="اعدادات المنشأة" Icon="@Icons.Material.Business" Expanded="false">
+                <MudNavLink Href="/counter" Icon="@Icons.Material.Info">معلومات المنشأة</MudNavLink>
+                <MudNavLink Href="/fetchdata" Icon="@Icons.Material.Dashboard">الهيكل التنظيمي</MudNavLink>
+                <MudNavLink Href="/" Icon="@Icons.Material.GroupWork">الفروع</MudNavLink>
+
+            </MudNavGroup>
+
+
+            @*قائمة المالية*@
+
+            <MudNavGroup Title="المالية" Icon="@Icons.Material.Money" Expanded="false">
+
+                <MudNavGroup Title="الحسابات" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="اليومية" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="مراكز التكلفة" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+
+                <MudNavGroup Title="الاصول الثابتة" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+                <MudNavGroup Title="الكشوف الختامية" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+
+            </MudNavGroup>
+
+            @*قائمة النقدية*@
+
+            <MudNavGroup Title="النقدية" Icon="@Icons.Material.Cached" Expanded="false">
+
+                <MudNavGroup Title="سندات القبض" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="سندات الصرف" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="يومية الصندوق  / البنك" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+            </MudNavGroup>
+
+
+            @*قائمة الموارد البشرية*@
+
+            <MudNavGroup Title="الموارد البشرية" Icon="@Icons.Material.Groups" Expanded="false">
+
+                <MudNavGroup Title="سندات القبض" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="سندات الصرف" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="يومية الصندوق  / البنك" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+            </MudNavGroup>
+
+
+            @*قائمة المخزون*@
+
+            <MudNavGroup Title="المخزون" Icon="@Icons.Material.Store" Expanded="false">
+
+                <MudNavGroup Title="سندات القبض" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="سندات الصرف" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="يومية الصندوق  / البنك" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+            </MudNavGroup>
+
+
+
+            @*قائمة المشتريات*@
+
+            <MudNavGroup Title="المشتريات" Icon="@Icons.Material.AddShoppingCart" Expanded="false">
+
+                <MudNavGroup Title="سندات القبض" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="سندات الصرف" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="يومية الصندوق  / البنك" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+            </MudNavGroup>
+
+
+
+            @*قائمة المبيعات*@
+
+            <MudNavGroup Title="المبيعات" Icon="@Icons.Material.PointOfSale" Expanded="false">
+
+                <MudNavGroup Title="سندات القبض" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="سندات الصرف" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="يومية الصندوق  / البنك" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+            </MudNavGroup>
+
+
+            @*قائمة اعدادات*@
+
+            <MudNavGroup Title="الاعدادات" Icon="@Icons.Material.Settings" Expanded="false">
+
+                <MudNavGroup Title="سندات القبض" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="سندات الصرف" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="يومية الصندوق  / البنك" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+            </MudNavGroup>
+
+
+
+            @*قائمة التعليمات*@
+
+            <MudNavGroup Title="التعليمات" Icon="@Icons.Material.HelpCenter" Expanded="false">
+
+                <MudNavGroup Title="سندات القبض" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="سندات الصرف" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+                <MudNavGroup Title="يومية الصندوق  / البنك" Icon="@Icons.Material.Settings" Expanded="false">
+                    <MudNavLink Href="/users" Icon="@Icons.Material.People">Users</MudNavLink>
+                    <MudNavLink Href="/security" Icon="@Icons.Material.Security">Security</MudNavLink>
+                </MudNavGroup>
+
+            </MudNavGroup>
+
+        </MudNavMenu>
+    </MudDrawer>
+    <MudMainContent Class="pt-16 ">
+        <MudContainer Class="mt-6 ">
+            <div class="content pa-4 rounded mud-elevation-3">
+                @Body
+            </div>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code{
+    bool open = true;
+    bool clipped = false;
+
+    void ToggleDrawer()
+    {
+        open = !open;
+    }
+
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Blue.Darken3,
+            Secondary = Colors.Green.Accent4,
+            AppbarBackground = Colors.Red.Default,
+        },
+
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidth = "260px"
+        }
+    };
+
+}
+
+<style>
+    .mud-nav-link .mud-nav-link-icon {
+        color: blue;
+    }
+
+    .mud-nav-group > .mud-nav-link > .mud-nav-link-text {
+        font-family: 'Cairo', sans-serif;
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .mud-nav-link .mud-nav-link-text {
+        font-family: 'Cairo', sans-serif;
+        font-size: smaller;
+        font-weight: bold;
+        width: 100%;
+        text-align: right;
+        margin-right: 12px;
+        letter-spacing: 0;
+    }
+
+
+
+    .mud-icon-size-medium {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .hederh4 {
+        text-align: justify;
+        font-family: 'Cairo';
+        font-size: larger;
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+
